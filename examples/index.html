@@ -27,16 +27,16 @@
       scrolltracker()
       .watch({
         element: document.querySelector('div#div1'),
-        onseen: function (el) {
-          window.alert('Reading '+el.id);
-          ga('send', 'event', 'Reading', 'div1', document.title);
+        onseen: function (el, timeSpent) {
+          window.alert('Reading '+el.id + ', spent ' + timeSpent + 's');
+          ga('send', 'event', 'Reading', el.id, document.title, timeSpent);
         }
       })
       .watch({
         element: document.querySelector('div#div2'),
-        onseen: function (el) {
-          window.alert('Reading '+el.id);
-          ga('send', 'event', 'Reading', 'div2', document.title);
+        onseen: function (el, timeSpent) {
+          window.alert('Reading '+el.id + ', spent ' + timeSpent + 's');
+          ga('send', 'event', 'Reading', el.id, document.title, timeSpent);
         }
       })
       .start();
