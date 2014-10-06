@@ -7,7 +7,22 @@ It's a small standalone scrolling tracking library based on the idea of [this bl
 HOW TO USE
 ------------
 
-TODO
+```js
+scrolltracker()
+.watch({
+  element: document.querySelector('div#div1'),
+  onseen: function (el, timeSpent) {
+    ga('send', 'event', 'Reading', el.id, document.title, timeSpent);
+  }
+})
+.watch({
+  element: document.querySelector('div#div2'),
+  onseen: function (el, timeSpent) {
+    ga('send', 'event', 'Reading', el.id, document.title, timeSpent);
+  }
+})
+.start();
+```
 
 ### Example
 
