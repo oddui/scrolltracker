@@ -1,9 +1,14 @@
 /**
  * scrolltracker.js
  *
+ *
  * Copyright 2014-2014 Ziyu (@oddui)
  *
  * Released under MIT and GPL Licenses.
+ *
+ * ------------------------------------------------
+ * author: Ziyu
+ * source: https://github.com/oddui/scrolltracker
  */
 
 (function (window, document) {
